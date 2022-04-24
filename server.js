@@ -48,9 +48,9 @@ const server = http.createServer((req, res) => {
       } else {
         console.log("osinjo.json is saved successfully");
       }
+      res.write("Your OS info has been saved successfully");
+      res.end();
     });
-    res.write("Your OS info has been saved successfully");
-    res.end();
   } else {
     res.statusCode = 404;
     res.setHeader("Content-Type", "text/html");
